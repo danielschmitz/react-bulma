@@ -3,8 +3,9 @@ import React from 'react'
 import Box from "./components/box"
 import Button from "./components/button"
 import Container from './components/container'
+import Notification from './components/notification'
 
-function App() {
+export default function App() {
 
   const handleClick = () => {
     console.log("handle click")
@@ -14,8 +15,7 @@ function App() {
     <Container>
       <Box>Hello World</Box>
       <Button onClick={handleClick}>Hello</Button>
-    </Container>
+      <Notification>Warning</Notification>
+    </Container >
   )
 }
-
-export default App
