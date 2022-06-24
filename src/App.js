@@ -5,6 +5,7 @@ import Box from "./components/box"
 import Button from "./components/button"
 import Container from './components/container'
 import Notification from './components/notification'
+import Panel from './components/panel'
 
 export default class App extends Component {
 
@@ -34,6 +35,11 @@ export default class App extends Component {
         </Block>
         <Block>
           <Notification visible={this.state.showWarning}>Warning</Notification>
+        </Block>
+        <Block>
+          <Panel title="Exemplo de lista">
+            Exemplo de lista
+          </Panel>
         </Block>
 
       </Container >
