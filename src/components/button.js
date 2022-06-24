@@ -9,6 +9,6 @@ export default function Button(props) {
     const className = "button is-primary " + small + large + danger
 
     return (
-        <button className={className}> {props.children}</button >
+        <button className={className} onClick={props.onClick}> {props.children}</button >
     )
 }

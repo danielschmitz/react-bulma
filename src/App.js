@@ -4,10 +4,15 @@ import Box from "./components/box"
 import Button from "./components/button"
 
 function App() {
+
+  const handleClick = () => {
+    console.log("handle click")
+  }
+
   return (
     <div className="container">
       <Box>Hello World</Box>
-      <Button>Hello</Button>
+      <Button onClick={handleClick}>Hello</Button>
     </div>
   )
 }
