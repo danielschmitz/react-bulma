@@ -1,10 +1,9 @@
+import Box from "./components/box";
 
 function App() {
   return (
     <div class="container">
-      <div class="box">
-        Hello World
-      </div>
+      <Box>Hello World</Box>
     </div>
   );
 }
