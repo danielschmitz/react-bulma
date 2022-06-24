@@ -3,6 +3,7 @@ import Block from './components/block'
 
 import Box from "./components/box"
 import Button from "./components/button"
+import Card from './components/card'
 import Container from './components/container'
 import Notification from './components/notification'
 import Panel from './components/panel'
@@ -101,8 +102,22 @@ export default class App extends Component {
                 ></input>
                 <br /><br />
               </form>
-
             </Panel>
+          </Block>
+          <Block>
+            <Card
+              title="Card Title"
+              subtitle="Card Sub Title"
+              footer={
+                [
+                  <Button key='1'>footer1</Button>,
+                  <Button key='1'>footer1</Button>,
+                  <Button key='2'>footer2</Button>
+                ]
+              }
+            >
+              Card content
+            </Card>
           </Block>
         </Panel>
       </Container >
