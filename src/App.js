@@ -35,8 +35,6 @@ export default class App extends Component {
     fruits.push(this.state.fruit)
     this.setState({ fruits, fruit: '' })
     event.preventDefault()
-
-    console.log("🚀onSubmitform")
   }
 
   handleChange = (event) => {
