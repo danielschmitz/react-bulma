@@ -10,16 +10,16 @@ import Tags from './components/tags'
 
 export default class App extends Component {
 
-  fruits = ['Banana', 'Orange', 'Apple', 'Avocado',
-    'Blackberries', 'Carambola', 'Guava', 'Kiwi', 'lemon', 'Mango',
-    'Papaia', 'Peaches', 'Pear', 'Pineapple', 'Strawberries', 'Watermelon'
-  ];
-
   constructor(props) {
     super(props)
 
     this.state = {
-      showWarning: true
+      showWarning: true,
+      fruit: "",
+      fruits: ['Banana', 'Orange', 'Apple', 'Avocado',
+        'Blackberries', 'Carambola', 'Guava', 'Kiwi', 'lemon', 'Mango',
+        'Papaia', 'Peaches', 'Pear', 'Pineapple', 'Strawberries', 'Watermelon'
+      ]
     }
   }
 
@@ -28,6 +28,19 @@ export default class App extends Component {
     this.setState({
       showWarning: !this.state.showWarning
     })
+  }
+
+  handleSubmitform = (event) => {
+    let fruits = this.state.fruits
+    fruits.push(this.state.fruit)
+    this.setState({ fruits, fruit: '' })
+    event.preventDefault()
+
+    console.log("🚀onSubmitform")
+  }
+
+  handleChange = (event) => {
+    this.setState({ fruit: event.target.value })
   }
 
   render() {
@@ -45,7 +58,21 @@ export default class App extends Component {
           </Block>
           <Block>
             <Panel title="Exemplo de lista com .map">
-              <Tags itens={this.fruits} />
+              <Tags itens={this.state.fruits} />
+            </Panel>
+          </Block>
+          <Block>
+            <Panel title="Exemplo de form">
+              <form onSubmit={this.handleSubmitform}>
+                <input className="input"
+                  type="text"
+                  placeholder="Add a fruit"
+                  value={this.state.fruit}
+                  onChange={this.handleChange}
+                ></input>
+                <br /><br />
+                <Button>Adicionar Fruta</Button>
+              </form>
             </Panel>
           </Block>
         </Panel>
