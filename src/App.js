@@ -31,10 +31,11 @@ export default class App extends Component {
   }
 
   handleSubmitform = (event) => {
+    event.preventDefault()
+    if (!this.state.fruit) return
     let fruits = this.state.fruits
     fruits.push(this.state.fruit)
     this.setState({ fruits, fruit: '' })
-    event.preventDefault()
   }
 
   handleChange = (event) => {
