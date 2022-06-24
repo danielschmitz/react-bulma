@@ -6,8 +6,11 @@ import Button from "./components/button"
 import Container from './components/container'
 import Notification from './components/notification'
 import Panel from './components/panel'
+import Tags from './components/tags'
 
 export default class App extends Component {
+
+  fruits = ['Banana', 'Orange', 'Apple'];
 
   constructor(props) {
     super(props)
@@ -37,8 +40,8 @@ export default class App extends Component {
           <Notification visible={this.state.showWarning}>Warning</Notification>
         </Block>
         <Block>
-          <Panel title="Exemplo de lista">
-            Exemplo de lista
+          <Panel title="Exemplo de lista com .map">
+            <Tags itens={this.fruits} />
           </Panel>
         </Block>
 
