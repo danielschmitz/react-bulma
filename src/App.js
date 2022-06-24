@@ -16,6 +16,8 @@ export default class App extends Component {
     this.state = {
       showWarning: true,
       fruit: "",
+      field1: "",
+      field2: "",
       fruits: ['Banana', 'Orange', 'Apple', 'Avocado',
         'Blackberries', 'Carambola', 'Guava', 'Kiwi', 'lemon', 'Mango',
         'Papaia', 'Peaches', 'Pear', 'Pineapple', 'Strawberries', 'Watermelon'
@@ -40,6 +42,13 @@ export default class App extends Component {
 
   handleChange = (event) => {
     this.setState({ fruit: event.target.value })
+    console.log(this.state)
+
+  }
+
+  handleChangeGeneric = (event) => {
+    let name = event.target.name
+    this.setState({ [name]: event.target.value })
   }
 
   render() {
@@ -72,6 +81,27 @@ export default class App extends Component {
                 <br /><br />
                 <Button>Adicionar Fruta</Button>
               </form>
+            </Panel>
+          </Block>
+          <Block>
+            <Panel title="Exemplo de form com mais campos">
+              <form>
+                <input className="input"
+                  type="text"
+                  name="field1"
+                  value={this.state.field1}
+                  onChange={this.handleChangeGeneric}
+                ></input>
+                <br /><br />
+                <input className="input"
+                  type="text"
+                  name="field2"
+                  value={this.state.field2}
+                  onChange={this.handleChangeGeneric}
+                ></input>
+                <br /><br />
+              </form>
+
             </Panel>
           </Block>
         </Panel>
