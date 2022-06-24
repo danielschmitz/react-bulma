@@ -1,4 +1,5 @@
 import React from 'react'
+import Block from './components/block'
 
 import Box from "./components/box"
 import Button from "./components/button"
@@ -13,9 +14,16 @@ export default function App() {
 
   return (
     <Container>
-      <Box>Hello World</Box>
-      <Button onClick={handleClick}>Hello</Button>
-      <Notification>Warning</Notification>
+      <Block>
+        <Box>Hello World</Box>
+      </Block>
+      <Block>
+        <Button onClick={handleClick}>Hello</Button>
+      </Block>
+      <Block>
+        <Notification>Warning</Notification>
+      </Block>
+
     </Container >
   )
 }
