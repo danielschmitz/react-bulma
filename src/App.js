@@ -10,7 +10,10 @@ import Tags from './components/tags'
 
 export default class App extends Component {
 
-  fruits = ['Banana', 'Orange', 'Apple'];
+  fruits = ['Banana', 'Orange', 'Apple', 'Avocado',
+    'Blackberries', 'Carambola', 'Guava', 'Kiwi', 'lemon', 'Mango',
+    'Papaia', 'Peaches', 'Pear', 'Pineapple', 'Strawberries', 'Watermelon'
+  ];
 
   constructor(props) {
     super(props)
@@ -30,21 +33,22 @@ export default class App extends Component {
   render() {
     return (
       <Container>
-        <Block>
-          <Box>Hello World</Box>
-        </Block>
-        <Block>
-          <Button onClick={this.handleClick}>toogle warning: {this.state.showWarning ? 'true' : 'false'}</Button>
-        </Block>
-        <Block>
-          <Notification visible={this.state.showWarning}>Warning</Notification>
-        </Block>
-        <Block>
-          <Panel title="Exemplo de lista com .map">
-            <Tags itens={this.fruits} />
-          </Panel>
-        </Block>
-
+        <Panel title="My React Example App">
+          <Block>
+            <Box>Hello World</Box>
+          </Block>
+          <Block>
+            <Button onClick={this.handleClick}>toogle warning: {this.state.showWarning ? 'true' : 'false'}</Button>
+          </Block>
+          <Block>
+            <Notification visible={this.state.showWarning}>Warning</Notification>
+          </Block>
+          <Block>
+            <Panel title="Exemplo de lista com .map">
+              <Tags itens={this.fruits} />
+            </Panel>
+          </Block>
+        </Panel>
       </Container >
     )
   }
