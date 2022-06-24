@@ -8,6 +8,7 @@ import Notification from './components/notification'
 
 export default function App() {
 
+
   const handleClick = () => {
     console.log("handle click")
   }
