@@ -2,7 +2,7 @@ import Box from "./components/box";
 
 function App() {
   return (
-    <div class="container">
+    <div className="container">
       <Box>Hello World</Box>
     </div>
   );

@@ -1,5 +1,6 @@
 export default function Box(props) {
+    console.log(props)
     return (
-        <div class="box">{props.children}</div>
+        <div className="box">{props.children}</div>
     )
 }
