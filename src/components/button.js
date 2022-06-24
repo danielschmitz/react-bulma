@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function Button(props) {
 
     const small = props.small ? " is-small " : ""
