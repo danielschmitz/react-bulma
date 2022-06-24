@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-bulma/static/css/main.eb589273.css",
-    "main.js": "/react-bulma/static/js/main.2689053b.js",
+    "main.js": "/react-bulma/static/js/main.3f59cd16.js",
     "static/js/787.f3004f7c.chunk.js": "/react-bulma/static/js/787.f3004f7c.chunk.js",
     "index.html": "/react-bulma/index.html",
     "main.eb589273.css.map": "/react-bulma/static/css/main.eb589273.css.map",
-    "main.2689053b.js.map": "/react-bulma/static/js/main.2689053b.js.map",
+    "main.3f59cd16.js.map": "/react-bulma/static/js/main.3f59cd16.js.map",
     "787.f3004f7c.chunk.js.map": "/react-bulma/static/js/787.f3004f7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb589273.css",
-    "static/js/main.2689053b.js"
+    "static/js/main.3f59cd16.js"
   ]
 }
